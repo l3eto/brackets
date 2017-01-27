@@ -1,0 +1,76 @@
+<html>
+    <head>
+      <title>Example Brackets</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.js" type="text/javascript"></script>
+      <!-- bto framework - from github repository -->
+      <script src="https://l3eto.github.io/bto/src/utils.js" type="text/javascript"></script>
+      <script src="https://l3eto.github.io/bto/src/bto.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="https://l3eto.github.io/bto/src/bto.css" />
+      <!-- brackets plugin -->
+      <script src="js/mainClasses.js" type="text/javascript"></script>
+      <script src="js/brackets.js" type="text/javascript"></script>
+      <link rel="stylesheet" type="text/css" href="css/bracket.css" />
+    </head>
+    <body>
+      <!-- example -->
+      <script type="text/javascript">
+          //define teams
+          var royal = new Team({"name":"Royal","tag":"RYL"});
+          var c29 = new Team({"name":"Capitulo 29","tag":"C29"});
+          var hillsong = new Team({"name":"Hillsong","tag":"HS"});
+          var test = new Team({"name":"Testing Team","tag":"test"});
+          //create competition
+          var bracket = new Bracket({
+            "teams":[royal,c29,hillsong,test],
+            "mode":"BO3",
+            "type":"random"
+          });
+          //add new team
+          var og = new Team({"name":"Origen","tag":"OG"});
+          bracket.addTeam(og);
+          //remove team
+          bracket.removeTeam("HS");
+          bracket.addTeam(hillsong);
+
+          //bracket init - create round 0
+          bracket.init();
+
+          //add results -> parametrs round - result
+          bracket.addResults({"round":0,"result":["3-1","2-1"]});
+
+      </script>
+
+      <div id="bracket">
+        <div class="container">
+          <div class="rounds">
+            <div class="round">
+
+              <div class="teams">
+                <div class="team">
+                  <div class="name">Cargando...</div>
+                  <div class="score">0</div>
+                </div>
+                <div class="team">
+                  <div class="name">Cargando...</div>
+                  <div class="score">0</div>
+                </div>
+              </div>
+
+              <div class="teams">
+                <div class="team lose">
+                  <div class="name">Cargando...</div>
+                  <div class="score">1</div>
+                </div>
+                <div class="team win">
+                  <div class="name">Cargando...</div>
+                  <div class="score">2</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </body>
+</html>
