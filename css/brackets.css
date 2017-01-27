@@ -1,0 +1,90 @@
+#bracket{
+  border:0;
+  padding:0;
+  margin:0;
+  display: block;
+}
+#bracket>.container{
+  width:auto;
+  height:auto;
+  display:block;
+  position:relative;
+}
+.container>.rounds{
+  width:150px;
+}
+.rounds>.teams{
+  display: block;
+}
+.teams>.team{
+  display:flex;
+}
+.teams>.team>.name{
+  flex:1;
+}
+.teams>.team>.score{
+  flex:0;
+}
+.teams>.team{
+  width:auto;
+  height:auto;
+  text-align: center;
+  margin:10px;
+  border-radius:4px;
+  font-weight: 400;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color:#222;
+  white-space:nowrap;
+}
+.teams>.team:hover{
+  cursor:pointer;
+}
+.team>.name,.team>.score{
+  display:inline-block;
+  padding:7px 0px;
+  white-space: normal;
+}
+.teams>.team>.score{
+  padding:7px 10px;
+}
+/*case : default*/
+.teams>.team{
+  background-color: rgba(240,240,240,0.95);
+  border-bottom: 1px solid rgba(190,190,190,0.95);
+  border-left: 1px solid rgba(190,190,190,0.95);
+  border-right: 1px solid rgba(190,190,190,0.95);
+}
+.teams>.team:hover{
+  background-color: rgba(245,245,245,0.95);
+}
+.teams>.team>.score{
+  border-left: 1px solid rgba(190,190,190,0.95);
+}
+/*case : win*/
+.teams>.team.win{
+  background-color: rgba(200, 240, 200, 0.95);
+  border-bottom: 1px solid rgba(150,190,150,0.95);
+  border-left: 1px solid rgba(150,190,150,0.95);
+  border-right: 1px solid rgba(150,190,150,0.95);
+}
+.teams>.team.win:hover{
+  background-color: rgba(190, 250, 190, 0.95);
+}
+.teams>.team.win>.score{
+  border-left: 1px solid rgba(150,190,150,0.95);
+}
+/*case : lose*/
+.teams>.team.lose{
+  background-color: rgba(240, 200, 200, 0.95);
+  border-bottom: 1px solid rgba(190,150,150,0.95);
+  border-left: 1px solid rgba(190,150,150,0.95);
+  border-right: 1px solid rgba(190,150,150,0.95);
+}
+.teams>.team.lose:hover{
+  background-color: rgba(250, 190, 190, 0.95);
+}
+.teams>.team.lose>.score{
+  border-left: 1px solid rgba(190,150,150,0.95);
+}
