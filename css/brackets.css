@@ -88,3 +88,52 @@
 .teams>.team.lose>.score{
   border-left: 1px solid rgba(190,150,150,0.95);
 }
+
+
+#test{width:200px;height:200px;}
+  .bracket-space{
+    display:inline-block;
+    white-space:nowrap;
+    width:100%;
+    height:100%;
+  }
+  .bracket-space>.a{
+    display:inline-block;
+    white-space: nowrap;
+    width:50%;
+    height:100%;
+  }
+  .bracket-space>.a.left>.b{
+    display:block;
+    white-space:nowrap;
+    width:100%;
+    height:25%;
+  }
+  .bracket-space>.a.left>.b.top{
+    border-top:1px solid #6a737c;
+    border-right:1px solid #6a737c;
+  }
+  .bracket-space.top-win>.a.left>.b.top{
+    border-top:1px solid #5fba7d;
+    border-right:1px solid #5fba7d;
+  }
+  .bracket-space>.a.left>.b.bottom{
+    border-bottom:1px solid #6a737c;
+    border-right:1px solid #6a737c;
+  }
+  .bracket-space.bot-win>.a.left>.b.top{
+    border-bottom:1px solid #5fba7d;
+    border-right:1px solid #5fba7d;
+  }
+  .bracket-space>.a.right>.c{
+    white-space:nowrap;
+    width:100%;
+    height:50%;
+  }
+  .bracket-space>.a.right>.c.top{
+    border-bottom:1px solid black;
+  }
+  .bracket-space.bot-win>.a.right>.c.top,
+  .bracket-space.top-win>.a.right>.c.top{
+    border-bottom:1px solid #5fba7d;
+  }
